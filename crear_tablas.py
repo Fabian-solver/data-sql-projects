@@ -36,8 +36,12 @@ def inicializar_base_de_datos():
             velocidad_max_kmh REAL,
             carga_fuerza_kg REAL,
             fatiga_percibida INTEGER,
-            FOREIGN KEY (id_jugador) REFERENCES jugadores (id_jugador) ON DELETE CASCADE,
-            FOREIGN KEY (id_sesion) REFERENCES sesiones_entrenamiento (id_sesion) ON DELETE CASCADE
+            FOREIGN KEY (id_jugador) 
+            REFERENCES jugadores (id_jugador) 
+            ON DELETE CASCADE,
+            FOREIGN KEY (id_sesion) 
+            REFERENCES sesiones_entrenamiento (id_sesion) 
+            ON DELETE CASCADE
         )
     ''')
 
